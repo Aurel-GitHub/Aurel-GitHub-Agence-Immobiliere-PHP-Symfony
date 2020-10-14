@@ -13,6 +13,12 @@
       </div>
     {% endfor %}
 
+    {%  if not form.vars.valid %}
+    <div class="alert alert-danger">
+      Veuillez renseigner correctement les champs
+    </div>
+    {% endif %}
+
     <table class="table table-striped">
       <thead>
       <tr>

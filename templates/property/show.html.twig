@@ -1,6 +1,14 @@
-{% extends 'base.html.twig' %}{% block title property.title %}{% block body %}
+{% extends 'base.html.twig' %}
+{% block title %}{{ property.title }}{% endblock %}
+
+{% block body %}
 <div class="jumbotron">
     <div class="container">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         <div class="row">
             <div class="col-md-8">
                 {% if property.filename %}
@@ -111,3 +119,5 @@
     </div>
 </div>
 </div>
+{% endblock %}
+

@@ -9,10 +9,17 @@
     <img src="https://pngimage.net/wp-content/uploads/2018/06/orange-header-png.png" alt="imageHeader" >
 </div>
 <br>
+<span class="preheader">Vous avez été contacté par  : {{ contact.firstname }} {{ contact.lastname }}</span>
+<br>
 <span class="preheader">Nom du bien : </span>
 <p><a href="{{ url('property.show', {id: contact.property.id, slug: contact.property.slug}) }}">{{ contact.property.title }}</a></p>
-
-
+<p><h3>Message: </h3></p>
+<p>{{ contact.message }}</p>
+<br>
+<form action="mailto:{{ contact.email }}">
+    <input type="submit" value="Recontacter" />
+</form>
+<br>
 <div class="image-footer">
     <img src="https://www.pngkit.com/png/full/253-2539875_orange-curve-line-png.png" alt="imageFooter">
 </div>
