@@ -20,7 +20,7 @@
                     <a class="nav-link" ><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-outline-primary"  style="" {% if current_menu is defined and current_menu == 'properties' %}active{% endif %} href="{{ path('property.index')}}">Acheter<span class="sr-only">(current)</span></button>
+                    <a href="{{ path('property.index')}}"><button type="button" class="btn btn-outline-primary"  style="" {% if current_menu is defined and current_menu == 'properties' %}active{% endif %} >Acheter<span class="sr-only">(current)</span></button></a>
                 </li>
                 {% if app.user %}
                     <ul class="navbar-nav">
