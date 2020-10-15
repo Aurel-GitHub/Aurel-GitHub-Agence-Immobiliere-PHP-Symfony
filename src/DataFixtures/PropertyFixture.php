@@ -3,12 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\Property;
-
-
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
-
-
 
 class PropertyFixture extends Fixture
 {

@@ -11,19 +11,10 @@ use App\Repository\PropertyRepository;
 use App\Notification\ContactNotification;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Knp\Component\Pager\PaginatorInterface;
 use Doctrine\ORM\EntityManagerInterface;
-//use App\Notification\Environement;
-
-
-
-
-
-
-
-
+use Symfony\Component\Routing\Annotation\Route;
 
 
 class PropertyController extends AbstractController
@@ -40,7 +31,7 @@ class PropertyController extends AbstractController
      private $em;  
 
      /**
-     * PropertyController constructor.
+     * PropertyController constructor
      * @param PropertyRepository $repository
      * @param EntityManagerInterface $em
      */
@@ -51,7 +42,7 @@ class PropertyController extends AbstractController
     }
 
     /**
-     * @route("/biens", name="property.index")
+     * @Route("/biens", name="property.index")
      * @param PaginatorInterface $paginator
      * @param Request $request
      * @return Response
@@ -107,12 +98,12 @@ class PropertyController extends AbstractController
                 'slug' =>$property->getSlug()]);
         }
 
-            return $this->render('property/show.html.twig', [
-                'property' => $property,
-                'current_menu' => 'properties',
-                'form' => $form->createView()
-            ]);
-        }
+        return $this->render('property/show.html.twig', [
+            'property' => $property,
+            'current_menu' => 'properties',
+            'form' => $form->createView()
+        ]);
+    }
 
 
 }

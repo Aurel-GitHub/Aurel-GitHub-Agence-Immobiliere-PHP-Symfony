@@ -156,9 +156,4 @@ class Contact
         return $this;
     }
 
-    
-
-
-
-
 }
