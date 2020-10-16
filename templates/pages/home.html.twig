@@ -3,13 +3,11 @@
 {% block title 'Agence Lorem Ipsum' %}
 
 {% block body %}
-<div class="jumbotron text-center">
-    <h2>Profitez de nos meilleures offres</h2><br><br>
+<div class="text-center">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="card border-primary mb-3">
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+            <div class="carousel-inner" style="width: 100%;height: 50rem;">
+                <div class="carousel-item active" style="text-align: center;">
                     <img src="https://www.maisons-sab.fr/wp-content/uploads/2018/07/22769710_346995245760904_5236855784682018523_o-1200x550.jpg" class="d-block w-100" alt="" >
                 </div>
                 <div class="carousel-item">
@@ -28,13 +26,10 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
-    </div>  
+    </div>
 </div>
 <div class="container text-center">
-    <font face="montserrat">
     <br><br><br><br><h1>Nos dernières offres</h1><br><br><br>
-    </font>
     <div class="row flex">
         {% for property in properties %}
             <div class="col-3">

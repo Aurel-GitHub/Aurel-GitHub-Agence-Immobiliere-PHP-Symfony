@@ -1,4 +1,9 @@
-  
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+{% endblock %}
+<title>{% block title %}Espace Aministrateur{% endblock %}</title>
+
+{% block body %}
 {{ form_start(form) }}
 <div class="row">
     <div class="col-md-4">{{ form_row(form.title) }}</div>
@@ -23,3 +28,4 @@
 {{ form_rest(form) }}
 <button class="btn btn-primary">{{ button|default('Enregistrer') }}</button>
 {{ form_end(form) }}
+{% endblock %}
